@@ -1040,19 +1040,17 @@ iconinit(void)
 	Image *tmp;
 
 	if(tagcols[BACK] == nil) {
-		/* Blue */
-		tagcols[BACK] = allocimagemix(display, DPalebluegreen, DWhite);
-		tagcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DPalegreygreen);
-		tagcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DPurpleblue);
-		tagcols[TEXT] = display->black;
-		tagcols[HTEXT] = display->black;
+		tagcols[BACK] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0xC3DDE1FF);
+		tagcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x44AAE6FF);
+		tagcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0xE17599FF);
+		tagcols[TEXT] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x1E1E1EFF);
+		tagcols[HTEXT] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x1E1E1EFF);
 
-		/* Yellow */
-		textcols[BACK] = allocimagemix(display, DPaleyellow, DWhite);
-		textcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DDarkyellow);
-		textcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DYellowgreen);
-		textcols[TEXT] = display->black;
-		textcols[HTEXT] = display->black;
+		textcols[BACK] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x1E1E1EFF);
+		textcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x44AAE6FF);
+		textcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x6A787AFF);
+		textcols[TEXT] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0xCCCCCCFF);
+		textcols[HTEXT] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x1E1E1EFF);
 	}
 
 	r = Rect(0, 0, Scrollwid, font->height+1);
@@ -1074,15 +1072,15 @@ iconinit(void)
 	draw(modbutton, r, tagcols[BACK], nil, r.min);
 	border(modbutton, r, ButtonBorder, tagcols[BORD], ZP);
 	r = insetrect(r, ButtonBorder);
-	tmp = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DMedblue);
+	tmp = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x009AFBFF);
 	draw(modbutton, r, tmp, nil, ZP);
 	freeimage(tmp);
 
 	r = button->r;
-	colbutton = allocimage(display, r, screen->chan, 0, DPurpleblue);
+	colbutton = allocimage(display, r, screen->chan, 0, 0xE9653BFF);
 
-	but2col = allocimage(display, r, screen->chan, 1, 0xAA0000FF);
-	but3col = allocimage(display, r, screen->chan, 1, 0x006600FF);
+	but2col = allocimage(display, r, screen->chan, 1, 0xFF578FFF);
+	but3col = allocimage(display, r, screen->chan, 1, 0x39E9A8FF);
 }
 
 /*

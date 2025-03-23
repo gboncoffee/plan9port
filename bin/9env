@@ -11,5 +11,7 @@ font=/mnt/font/FragmentMono-Regular/11a/font
 PAGER=nobs
 EDITOR=E
 
-kill -9 `{pgrep -x plumber}
-kill -9 `{pgrep -x fontsrv}
+acme.rc
+
+kill -9 `{pgrep -x plumber} | rc
+kill -9 `{pgrep -x fontsrv} | rc
