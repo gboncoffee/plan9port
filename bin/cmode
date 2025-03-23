@@ -1,0 +1,4 @@
+#!/bin/env -S 9 rc
+
+win2pwdtag
+acme-lsp -server '(\.c)|(\.h)|(\.cpp)|(\.hpp)$:clangd --clang-tidy' -workspaces .

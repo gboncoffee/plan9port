@@ -1,0 +1,13 @@
+#!/bin/env -S 9 rc
+
+gofmt -w .
+for (w in `{getwins}) {
+	if (9p read acme/$w/tag > /dev/null) {
+		window=`{9p read acme/$w/tag | awk '{print $1}'}
+		if (~ $window *.go) {
+    		echo get | 9p write acme/$w/ctl
+    	}
+    }
+}
+
+true

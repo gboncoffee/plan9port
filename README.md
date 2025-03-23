@@ -1,3 +1,12 @@
+This is my (96's) opinionated fork of plan9port. This mostly includes a bunch of
+scripts and patches for `acme(1)`.
+
+I also use `xplor`, `acme-lsp` and `L`.
+
+Below is the original README:
+
+---
+
 This is a port of many Plan 9 libraries and programs to Unix.
 
 Installation

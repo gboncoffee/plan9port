@@ -1,0 +1,13 @@
+#!/bin/env -S 9 rc
+
+find . -name "*.[c,h,cpp,hpp]" -exec clang-format -i \{\} \;
+for (w in `{getwins}) {
+	if (9p read acme/$w/tag > /dev/null) {
+		window=`{9p read acme/$w/tag | awk '{print $1}'}
+		if (~$window *.c *.h *.cpp *.hpp) {
+			echo get | 9p write acme/$w/ctl
+		}
+	}
+}
+
+true

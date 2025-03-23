@@ -1,0 +1,3 @@
+#!/bin/env -S 9 rc
+
+9p ls acme | grep '[0-9]+'

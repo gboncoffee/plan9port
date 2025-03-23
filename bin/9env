@@ -1,0 +1,15 @@
+#!/bin/env -S 9 rc
+
+plumber &
+fontsrv &
+
+TERM=dumb
+shell=rc
+SHELL=rc
+tabstop=4
+font=/mnt/font/FragmentMono-Regular/11a/font
+PAGER=nobs
+EDITOR=E
+
+kill -9 `{pgrep -x plumber}
+kill -9 `{pgrep -x fontsrv}

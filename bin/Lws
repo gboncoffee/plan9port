@@ -1,0 +1,2 @@
+#!/bin/env -S 9 rc
+exec L ws $*
