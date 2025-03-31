@@ -7,7 +7,7 @@ TERM=dumb
 shell=rc
 SHELL=rc
 tabstop=4
-font=/mnt/font/FragmentMono-Regular/11a/font
+font=/mnt/font/GeistMono-Regular/11a/font
 PAGER=nobs
 EDITOR=E
 
